@@ -2,40 +2,41 @@ package kafka.spring.boot.kafka.consumer.model;
 
 public class User {
 
-    private String name;
-    private String dept;
+    private String uid;
+    private long ts;
 
-    public String getName() {
-        return name;
+    public String getUid() {
+        return uid;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
-    public String getDept() {
-        return dept;
+    public long getTs() {
+        return ts;
     }
 
-    public void setDept(String dept) {
-        this.dept = dept;
+    public void setTs(long ts) {
+        this.ts = ts;
     }
 
     public User() {
     }
 
-    public User(String name, String dept) {
+    public User(String uid, long ts) {
 
-        this.name = name;
-        this.dept = dept;
+        this.uid = uid;
+        this.ts = ts;
     }
 
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("User{");
-        sb.append("name='").append(name).append('\'');
-        sb.append(", dept='").append(dept).append('\'');
+        sb.append("uid='").append(uid).append('\'');
+        sb.append(", ts='").append(ts).append('\'');
         sb.append('}');
         return sb.toString();
     }
 }
+
